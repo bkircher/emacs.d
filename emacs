@@ -22,3 +22,5 @@
 ;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 (load-theme 'solarized-dark t)
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
