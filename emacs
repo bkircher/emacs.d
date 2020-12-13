@@ -8,7 +8,7 @@
  '(custom-safe-themes
    '("2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" default))
  '(package-selected-packages
-   '(git-commit systemd solarized-theme markdown-mode ## ivy hydra)))
+   '(multiple-cursors git-commit systemd solarized-theme markdown-mode ## ivy hydra)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -24,3 +24,6 @@
 (load-theme 'solarized-dark t)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(require 'multiple-cursors)
+(global-set-key (kbd "C-d") 'mc/mark-next-like-this)
