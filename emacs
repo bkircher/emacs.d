@@ -25,8 +25,10 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; Multi cursor action
 (require 'multiple-cursors)
 (global-set-key (kbd "C-d") 'mc/mark-next-like-this)
+;; Would like to make this work: (global-set-key (kbd "M-I") 'mc/edit-beginning-of-lines)
 
 ;; Implementation of M-up and M-down to move lines (https://www.emacswiki.org/emacs/MoveLine)
 (defmacro save-column (&rest body)
